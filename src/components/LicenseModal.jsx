@@ -220,7 +220,7 @@ export default function LicenseModal({ visible, onActivated, onClose }) {
             {status === 'success' && <div className="text-green-600 text-center text-xs">激活成功！</div>}
             {status === 'fail' && <div className="text-red-500 text-center text-xs">激活码无效</div>}
             {status === 'expired' && <div className="text-orange-500 text-center text-xs">激活码已过期</div>}
-            {status === 'max_uses' && <div className="text-red-500 text-center text-xs">激活码使用次数已达上限（3次）</div>}
+            {status === 'max_uses' && <div className="text-red-500 text-center text-xs">激活码使用次数已达上限（10次）</div>}
           </>
         )}
         {activated && (

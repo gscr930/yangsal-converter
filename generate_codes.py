@@ -8,13 +8,13 @@ SECRET = 'YangsaL2025SecretKey'
 
 def generate_activation_code(license_type, days):
     """
-    生成最多使用3次的激活码
+    生成最多使用10次的激活码
     license_type: 'trial' 或 'yearly'
     days: 有效期天数
     """
     # 使用特殊标记表示激活日期将在激活时确定
     activation_marker = 'ACTIVATE_DATE'
-    max_uses = 3  # 最多使用3次
+    max_uses = 10  # 最多使用10次
     
     # 创建数据包：激活标记|许可证类型|天数|最大使用次数
     data = f"{activation_marker}|{license_type}|{days}|{max_uses}"
@@ -47,7 +47,7 @@ def generate_batch_codes():
             'code': code,
             'type': 'trial',
             'days': 30,
-            'max_uses': 3,
+            'max_uses': 10,
             'description': f'试用版激活码 #{i+1:04d}'
         })
     
@@ -59,7 +59,7 @@ def generate_batch_codes():
             'code': code,
             'type': 'yearly', 
             'days': 365,
-            'max_uses': 3,
+            'max_uses': 10,
             'description': f'年度版激活码 #{i+1:04d}'
         })
     
@@ -81,7 +81,7 @@ def save_codes_to_files(codes):
             f.write(f"    有效期: {code_info['days']}天\n")
             f.write(f"    最大使用次数: {code_info['max_uses']}次\n")
             f.write(f"    说明: 激活后从第一次激活当天开始计时\n")
-            f.write(f"    说明: 最多可在3台设备/浏览器上使用\n\n")
+            f.write(f"    说明: 最多可在10台设备/浏览器上使用\n\n")
     
     # 保存年度版激活码
     with open('yearly_codes.txt', 'w', encoding='utf-8') as f:
@@ -93,7 +93,7 @@ def save_codes_to_files(codes):
             f.write(f"    有效期: {code_info['days']}天\n")
             f.write(f"    最大使用次数: {code_info['max_uses']}次\n")
             f.write(f"    说明: 激活后从第一次激活当天开始计时\n")
-            f.write(f"    说明: 最多可在3台设备/浏览器上使用\n\n")
+            f.write(f"    说明: 最多可在10台设备/浏览器上使用\n\n")
     
     # 保存JSON格式（用于数据库导入）
     with open('activation_codes.json', 'w', encoding='utf-8') as f:
@@ -106,7 +106,7 @@ def save_codes_to_files(codes):
     print("- yearly_codes.txt (年度版激活码)")
     print("- activation_codes.json (JSON格式)")
     print("\n重要说明:")
-    print("- 每个激活码最多可使用3次")
+    print("- 每个激活码最多可使用10次")
     print("- 时间从第一次激活当天开始计算")
     print("- 后续激活只能使用剩余时间")
     print("- 完全离线，无需联网")
@@ -119,4 +119,4 @@ if __name__ == "__main__":
     save_codes_to_files(codes)
     
     print("\n激活码生成完成！")
-    print("注意：每个激活码最多使用3次，时间从第一次激活开始计算") 
+    print("注意：每个激活码最多使用10次，时间从第一次激活开始计算") 

@@ -1,0 +1,22 @@
+.starfield {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+.starfield::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="1.5" fill="white" opacity="0.8"/><circle cx="50" cy="30" r="1" fill="white" opacity="0.6"/><circle cx="90" cy="80" r="2" fill="white" opacity="0.7"/><circle cx="70" cy="60" r="1.2" fill="white" opacity="0.5"/><circle cx="30" cy="90" r="1.8" fill="white" opacity="0.6"/></svg>');
+  background-repeat: repeat;
+  opacity: 0.7;
+  animation: twinkle 6s linear infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+} 

@@ -1,0 +1,9 @@
+# Query: ཡང་སར
+# ContextLines: 1
+
+1 个结果 - 1 个文件
+
+src/pages/ConvertPage.jsx:
+  116            className="absolute left-1/2 -translate-x-1/2 top-4 w-max text-gray-400 text-sm font-semibold tracking-wide select-none pointer-events-auto z-20 transition-all duration-300 hover:scale-150 hover:tracking-widest hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-400 hover:to-fuchsia-500 hover:drop-shadow-[0_2px_12px_rgba(80,120,255,0.25)] hover:font-extrabold cursor-pointer" style={{willChange:'transform'}}>
+  117:           {i18n.language === 'zh' ? '央萨尔藏文编码转换器' : 'དབྱངས་གསལ་བོད་ཡིག་ཨང་སྒྲིག་སྒྱུར་ཆས།'}
+  118          </div>

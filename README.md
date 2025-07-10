@@ -1,0 +1,1 @@
+# 央萨尔藏文编码转换器\n\n## 项目简介\n\n本项目为网页端"央萨尔藏文编码转换器"，支持班智达藏文编码与Unicode藏文编码互转，具备高科技、未来感、星空风格UI，支持中/藏双语。\n\n## 启动方式\n\n1. 安装依赖：\n   ```\n   npm install\n   ```\n2. 启动开发服务器：\n   ```\n   npm start\n   ```\n3. 浏览器访问 http://localhost:3000\n\n## 后期桌面端扩展建议\n\n可使用 [Electron](https://www.electronjs.org/) 或 [Tauri](https://tauri.app/) 对本项目进行桌面端打包，无需重写代码。 

@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+body {
+  font-family: 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Arial', 'sans-serif';
+}
+
+.title-font {
+  font-family: 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Arial', 'sans-serif';
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.title-font-bold {
+  font-family: 'Inter', 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Arial', 'sans-serif';
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@keyframes arrowFlow {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+.arrow-animate {
+  animation: arrowFlow 2s ease-in-out infinite;
+}
+
+.arrow-animate-delay-1 {
+  animation: arrowFlow 2s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+.arrow-animate-delay-2 {
+  animation: arrowFlow 2s ease-in-out infinite;
+  animation-delay: 0.6s;
+} 
